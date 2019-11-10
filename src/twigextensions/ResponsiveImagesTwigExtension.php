@@ -96,7 +96,7 @@ class ResponsiveImagesTwigExtension extends \Twig_Extension
         }
 
         $document = new \DOMDocument();
-        @$document->loadHTML($isRedactor ? $html->getRawContent() : $html);
+        @$document->loadHTML($isRedactor ? mb_convert_encoding($html->getRawContent(), 'HTML-ENTITIES', 'UTF-8') : $html);
 
         $images = $document->getElementsByTagName('img');
 
