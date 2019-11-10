@@ -86,7 +86,7 @@ class ResponsiveImagesTwigExtension extends \Twig_Extension
 
     public function overrideHTML($html, array $options = array())
     {
-        $options = $options[0];
+        $options = reset($options);
         $options['sizes'] = $options['sizes'] ?? '100vw';
 
         $isRedactor = false;
