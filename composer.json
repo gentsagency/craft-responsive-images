@@ -2,7 +2,7 @@
     "name": "gentsagency/craft-responsive-images",
     "description": "Twig helpers for easy responsive images and optional imgix integration.",
     "type": "craft-plugin",
-    "version": "0.2.4",
+    "version": "0.2.4.1",
     "keywords": [
         "craft",
         "cms",
