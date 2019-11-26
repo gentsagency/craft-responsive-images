@@ -120,7 +120,7 @@ class ResponsiveImagesTwigExtension extends \Twig_Extension
             }
         }
 
-        $newHTML = preg_replace('~<(?:!DOCTYPE|/?(?:html|head|body))[^>]*>\s*~i', '', $document->saveHTML());
+        $newHTML = str_replace(array('%7B','%7D'), array('{','}'), $document->saveHTML( $document->documentElement ));
 
         if ($isRedactor) {
             return new craft\redactor\FieldData($newHTML);
